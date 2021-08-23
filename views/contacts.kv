@@ -1,0 +1,275 @@
+#: import pprint pprint.pprint
+#: import C kivy.utils.get_color_from_hex
+
+
+<ContactWidget>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        md_bg_color: 1, 1, 1, 1
+        spacing: dp(5)
+        padding_y: dp(10)
+        MDTextField:
+            hint_text: "A"
+            pos_hint: {'center_x': .5, 'center_y': .9}
+            size_hint_x: .9
+        ScrollView:
+            do_scroll_x: False
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: 650
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    spacing: dp(20)
+                    padding: dp(15), dp(0), dp(10), dp(10)
+                    size_hint_y: .15
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .2
+
+                        MDIconButton:
+                            icon: "asserts/plus.png"
+                            user_font_size: dp(15)
+                            pos_hint: {'center_y': .5}
+
+                        MDLabel:
+                            text: "Envoyer à un nouveau numéro"
+                            size_hint_y: None
+                            font_style: "Body2"
+                            bold: True
+                            size: self.texture_size
+                            pos_hint: {'center_y': .5}
+                            
+                MDLabel:
+                    text: "CONTACTS"
+                    font_style: "Body2"
+                    size_hint_y: None
+                    size: self.texture_size
+                    md_bg_color: 241/255.0, 241/255.0, 241/255.0, 1
+                    color: 154/255.0, 154/255.0, 154/255.0, 1
+                    padding_y: dp(8)
+                    padding_x: dp(20)
+
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    padding: dp(20), dp(0), dp(20), dp(0)
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                            canvas:
+
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+
+                            MDLabel:
+                                text: "0140456289"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+
+                            MDLabel:
+                                text: "+225 01 40 45 62 89"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Aaron"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 07 25 36 89 52"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Aimée"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 05 23 65 89 63"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Bbyou"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 04 52 69 85 32"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Carl"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 05 69 84 52 63"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Danielle"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 01 40 45 52 00"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Donathien"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 01 40 45 62 89"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Eunice"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 07 58 69 32 69"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1
+
+                    MDBoxLayout:
+                        spacing: dp(15)
+                        size_hint_y: .1
+                        pos_hint: {'center_y': .5}
+                        MDIconButton:
+                            icon: "asserts/user1.png"
+                            user_font_size: dp(10)
+                            pos_hint: {'center_y': .5}
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            padding: dp(0), dp(0), dp(0), dp(10)
+                            MDLabel:
+                                text: "Elysée"
+                                font_style: "Body2"
+                                bold: True
+                                size_hint_y: None
+                                size: self.texture_size
+                            MDLabel:
+                                text: "+225 01 41 05 62 89"
+                                font_style: "Body2"
+                                size_hint_y: None
+                                size: self.texture_size
+                                color: 154/255.0, 154/255.0, 154/255.0, 1

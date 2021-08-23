@@ -1,0 +1,106 @@
+#: import pprint pprint.pprint
+#: import C kivy.utils.get_color_from_hex
+
+<DetailsWidget>:
+    orientation: 'vertical'
+    spacing: dp(20)
+    md_bg_color: 1, 1, 1, 1
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_y: .1
+        padding: dp(20), dp(0), dp(0), dp(10)
+        MDIconButton:
+            icon: "asserts/user1.png"
+            user_font_size: dp(10)
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_y: .6
+        spacing: dp(20)
+        padding: dp(20), dp(0), dp(20), dp(0)
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(3)
+            MDLabel:
+                text: "10.000F"
+                bold: True
+                font_style: "H6"
+                size_hint_y: None
+                size: self.texture_size
+            MDLabel:
+                text: "De TANO M 0745236988"
+                font_style: "Body2"
+                size_hint_y: None
+                size: self.texture_size
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(3)
+            MDLabel:
+                text: "Montant Reçu"
+                font_style: "Caption"
+                size_hint_y: None
+                size: self.texture_size
+                theme_text_color: "Secondary"
+            MDLabel:
+                text: "10.000F"
+                font_style: "Caption"
+                size_hint_y: None
+                size: self.texture_size
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(3)
+            MDLabel:
+                text: "Frais"
+                font_style: "Caption"
+                theme_text_color: "Secondary"
+                size_hint_y: None
+                size: self.texture_size
+            MDLabel:
+                text: "100F"
+                font_style: "Caption"
+                size_hint_y: None
+                size: self.texture_size
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(3)
+            MDLabel:
+                text: "Statut"
+                font_style: "Caption"
+                theme_text_color: "Secondary"
+                size_hint_y: None
+                size: self.texture_size
+            MDLabel:
+                text: "Succés"
+                font_style: "Caption"
+                size_hint_y: None
+                size: self.texture_size
+
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(3)
+            MDLabel:
+                text: "Date et Heure"
+                font_style: "Caption"
+                theme_text_color: "Secondary"
+                size_hint_y: None
+                size: self.texture_size
+            MDLabel:
+                text: "juil. 28, 15:38"
+                font_style: "Caption"
+                size_hint_y: None
+                size: self.texture_size
+
+        MDBoxLayout:
+            spacing: dp(3)
+            MDLabel:
+                text: "En partenariat avec UBA"
+                theme_text_color: "Secondary"
+                font_style: "Caption"
+                size_hint_y: None
+                size: self.texture_size
+                
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_y: .3

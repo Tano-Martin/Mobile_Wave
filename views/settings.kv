@@ -1,0 +1,115 @@
+#: import pprint pprint.pprint
+#: import C kivy.utils.get_color_from_hex
+
+<SettingsWidget>:
+    orientation: 'vertical'
+    spacing: dp(20)
+    md_bg_color: 1, 1, 1, 1
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_y: .6
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)
+
+            MDIconButton:
+                icon: "share-variant"
+                pos_hint: {'center_y': .5}
+
+            MDLabel:
+                text: "Inviter un ami à rejoindre Wave"
+                font_style: "Body2"
+
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)   
+            MDIconButton:
+                icon: "phone"
+                pos_hint: {'center_y': .5}
+            MDLabel:
+                text: "Appelez le service client gratuitement"
+                font_style: "Body2"
+                
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)   
+            MDIconButton:
+                icon: "map-marker"
+                pos_hint: {'center_y': .5}
+            MDLabel:
+                text: "Trouvez les agents à proximité"
+                font_style: "Body2"
+                
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)   
+            MDIconButton:
+                icon: "clipboard-text"
+                pos_hint: {'center_y': .5}
+            MDLabel:
+                text: "Vérifiez votre plafond"
+                font_style: "Body2"
+                
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)   
+            MDIconButton:
+                icon: "security"
+                pos_hint: {'center_y': .5}
+            MDLabel:
+                text: "Modifiez votre code secret"
+                font_style: "Body2"
+                
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)   
+            MDIconButton:
+                icon: "creation"
+                pos_hint: {'center_y': .5}
+            MDLabel:
+                text: "Utiliser le code promotionnel"
+                font_style: "Body2"
+                
+        MDBoxLayout:
+            size_hint_y: .1
+            padding: dp(20), dp(0), dp(0), dp(10)
+            spacing: dp(20)   
+            MDIconButton:
+                icon: "logout"
+                pos_hint: {'center_y': .5}
+            MDLabel:
+                text: "Se déconnecter (07 52 36 98 52)"
+                font_style: "Body2"
+
+    MDBoxLayout:
+        orientation: 'vertical'
+        size_hint_y: .4
+        padding: dp(10)
+        spacing: dp(5)
+        MDIcon:
+            icon: "asserts/uba.png"
+            size_hint: None, None
+            width: dp(50)
+            height: dp(25)
+            pos_hint: {'center_x': .5}
+
+        MDLabel:
+            text: "Conditions Générales d'Utilisation << Wave >>"
+            font_style: "Caption"
+            halign: "center"
+            size_hint_y: None
+            size: self.texture_size
+            color: 154/255.0, 154/255.0, 154/255.0, 1
+        MDLabel:
+            text: "Version 21.08.16-f6449f"
+            font_style: "Caption"
+            halign: "center" 
+            size_hint_y: None
+            size: self.texture_size
+            color: 154/255.0, 154/255.0, 154/255.0, 1

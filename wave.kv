@@ -1,0 +1,295 @@
+#: import pprint pprint.pprint
+#: import details controllers.details
+#: import contacts controllers.contacts
+#: import settings controllers.settings
+
+
+
+Navigation:
+    Screen:
+        name: "accueil"
+        MDBoxLayout:
+            orientation: 'vertical'
+            on_parent: pprint(dir(self))
+            MDToolbar:
+                left_action_items: [["cog", lambda x: root.go_to("settings")]]
+                title: "10.000F"
+                size_hint_y: None
+                height: dp(40)
+                md_bg_color: 75/255.0, 65/255.0, 221/255.0, 1
+            ScrollView:
+                do_scroll_x: False
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: None
+                    height: 600
+                    md_bg_color: 75/255.0, 65/255.0, 221/255.0, 1
+                    Image:
+                        source: "asserts\waveCarte.png"
+                        size_hint: .3, .5
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        size_hint_x: .8
+                        allow_stretch: True
+                        keep_ratio: False
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        padding: dp(10)
+                        md_bg_color: 1, 1, 1, 1
+                        size_hint_y: None
+                        height: dp(80) 
+                        canvas:
+                            Color:
+                                rgb: 75/255.0, 65/255.0, 221/255.0
+                            Rectangle:
+                                size: self.width, self.height/2
+                                pos: self.x, self.center_y
+
+                        MDCard:
+                            orientation: 'vertical'
+                            md_bg_color: 1, 1, 1, 1
+                            radius: [dp(5)]
+                            elevation: 10
+                            padding: dp(0), dp(0), dp(0), dp(8)
+                            on_release: root.go_to("contacts")
+                            MDIcon:
+                                halign: "center"
+                                icon: "account"
+                                theme_text_color: 'Custom'
+                                text_color: 75/255.0, 65/255.0, 221/255.0
+                                font_size:dp(30) 
+
+                            MDLabel:
+                                text: "TRANSFERT"
+                                halign:"center"
+                                size_hint_y: None
+                                size: self.texture_size
+                                font_style:("Body2")
+                                color: 75/255.0, 65/255.0, 221/255.0
+
+                    MDBoxLayout:
+                        orientation: 'vertical'
+                        md_bg_color: 1, 1, 1, 1
+                        padding: dp(10)
+                        spacing: dp(20)
+
+                        MDCard:
+                            pos_hint: {'center_x': .5, 'center_y': .5}
+                            orientation: 'vertical'
+                            padding: dp(10)
+                            elevation: 20
+                            spacing: dp(10)
+                            radius: [dp(5)]
+                            on_release:root.go_to("details")
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                MDBoxLayout:
+                                    MDLabel:
+                                        text: "De Pierre 07 52 36 98 45"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+                                    MDLabel:
+                                        text: "1.000F"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size_hint_x: .3
+                                        halign: "right"
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0
+                                        bold: True
+                                MDLabel:
+                                    text: "juil. 28"
+                                    font_style: "Caption"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    theme_text_color: "Secondary"
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                MDBoxLayout:
+                                    MDLabel:
+                                        text: "Retrait"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+                                    MDLabel:
+                                        text: "-25.000F"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size_hint_x: .3
+                                        halign: "right"
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0
+                                        bold: True
+
+                                MDLabel:
+                                    text: "juil. 28"
+                                    font_style: "Caption"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    theme_text_color: "Secondary"
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                MDBoxLayout:    
+                                    MDLabel:
+                                        text: "De 07 00 86 96 45"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+                                    MDLabel:
+                                        text: "3.000F"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size_hint_x: .3
+                                        halign: "right"
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0
+                                        bold: True
+
+                                MDLabel:
+                                    text: "juil. 20"
+                                    font_style: "Caption"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    theme_text_color: "Secondary"
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                MDBoxLayout:
+                                    MDLabel:
+                                        text: "De Estelle 05 02 36 58 96"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+                                    MDLabel:
+                                        text: "8.000F"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size_hint_x: .3
+                                        halign: "right"
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0
+                                        bold: True
+
+                                MDLabel:
+                                    text: "juil. 01"
+                                    font_style: "Caption"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    theme_text_color: "Secondary"
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                MDBoxLayout:
+                                    MDLabel:
+                                        text: "De Pierre 07 52 36 98 45"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+                                    MDLabel:
+                                        text: "1.000F"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size_hint_x: .3
+                                        halign: "right"
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+
+                                MDLabel:
+                                    text: "juil. 28"
+                                    font_style: "Caption"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    theme_text_color: "Secondary"
+
+                            MDBoxLayout:
+                                orientation: 'vertical'
+                                MDBoxLayout:
+                                    MDLabel:
+                                        text: "De Pierre 07 52 36 98 45"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+                                    MDLabel:
+                                        text: "1.000F"
+                                        font_style: "Body2"
+                                        size_hint_y: None
+                                        size_hint_x: .3
+                                        halign: "right"
+                                        size: self.texture_size
+                                        color: 14/255.0, 13/255.0, 93/255.0, 1
+                                        bold: True
+
+
+                                MDLabel:
+                                    text: "juil. 28"
+                                    font_style: "Caption"
+                                    size_hint_y: None
+                                    size: self.texture_size
+                                    theme_text_color: "Secondary"
+       
+    Screen:
+        name: "details"
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(20)
+            md_bg_color: 1, 1, 1, 1
+            padding: dp(0), dp(10), dp(0), dp(0)
+            MDToolbar:
+                left_action_items: [["arrow-left", lambda x : root.back()]]
+                md_bg_color: 1, 1, 1, 1
+                specific_text_color: 0, 0, 0, 1
+                size_hint_y: .05
+                padding: dp(1)
+            DetailsWidget:
+
+    Screen:
+        name: "settings"
+        MDBoxLayout:
+            orientation: 'vertical'
+            spacing: dp(20)
+            md_bg_color: 1, 1, 1, 1
+            padding: dp(0), dp(10), dp(0), dp(0)
+            MDToolbar:
+                left_action_items: [["arrow-left", lambda x : root.back()]]
+                title: "Paramètres"
+                font_size: "20sp"
+                md_bg_color: 1, 1, 1, 1
+                specific_text_color: 0, 0, 0, 1
+                size_hint_y: .05
+                padding: dp(1)
+            SettingsWidget:
+
+    Screen:
+        name: "contacts"
+        MDBoxLayout:
+            orientation: 'vertical'
+            md_bg_color: 1, 1, 1, 1     
+            MDToolbar:
+                left_action_items: [["arrow-left", lambda x : root.back()]]
+                title: "Envoyer de l'Argent"
+                md_bg_color: 1, 1, 1, 1
+                specific_text_color: 0, 0, 0, 1
+                padding: dp(10)
+            ContactWidget:
