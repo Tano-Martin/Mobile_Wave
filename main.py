@@ -1,4 +1,5 @@
 from kivymd.app import MDApp
+from kivy.config import Config
 from kivy.uix import screenmanager
 
 
@@ -26,5 +27,8 @@ class Navigation(screenmanager.ScreenManager):
             self.current = name
 
 
+# Config.set("graphics", "width", "420")
+# Config.set("graphics", "height", "650")
+# Config.set("graphics", "resizable", "0")
 
 WaveApp().run()
