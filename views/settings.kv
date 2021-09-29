@@ -1,5 +1,7 @@
 #: import pprint pprint.pprint
 #: import C kivy.utils.get_color_from_hex
+#: import md_icons kivymd.icon_definitions.md_icons 
+
 
 <SettingsWidget>:
     orientation: 'vertical'
@@ -84,7 +86,8 @@
                 icon: "logout"
                 pos_hint: {'center_y': .5}
             MDLabel:
-                text: "Se déconnecter (07 52 36 98 52)"
+                text: "Se déconnecter [color=#fff000](07 52 36 98 52)[/color] [font=Icons]{0}[/font]".format(md_icons['android'])
+                markup: True
                 font_style: "Body2"
 
     MDBoxLayout:
